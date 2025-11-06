@@ -178,7 +178,7 @@ function Footer() {
                   <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About Us</a></li>
-                    <li><a href="/health-insurance">Health Insurance</a></li>
+                    <li><a href="/term-insurance">Health Insurance</a></li>
                     <li><a href="/term-insurance">Term Insurance</a></li>
                     <li><a href="/contact">Contact Us</a></li>
                   </ul>
@@ -201,8 +201,8 @@ function Footer() {
                 <div className="widget widget_services style-1">
                   <h5 className="footer-title">LEGAL</h5>
                   <ul>
-                    <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-                    <li><Link to="/terms-conditions">Terms & Conditions</Link></li>
+                    <li><Link target='_blank' to="/privacy-policy">Privacy Policy</Link></li>
+                    <li><Link target='_blank' to="/terms-conditions">Terms & Conditions</Link></li>
                   </ul>
                 </div>
               </div>
@@ -264,7 +264,7 @@ function Footer() {
       }}>
         <div className="enquiry-popup-content">
           <button className="popup-close" onClick={closePopup}>&times;</button>
-          <h3>Buying health insurance for?</h3>
+          <h3>Buying term insurance for?</h3>
           <form className="enquiry-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <input 

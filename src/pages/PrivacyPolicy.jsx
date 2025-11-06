@@ -32,7 +32,7 @@ function PrivacyPolicy() {
                 <li>Date of birth and age</li>
                 <li>Identity proof documents (Aadhaar, PAN, etc.)</li>
                 <li>Financial information for insurance quotes and policy processing</li>
-                <li>Health information (for health insurance applications)</li>
+                <li>Term information (for term insurance applications)</li>
                 <li>Employment and income details</li>
               </ul>
 

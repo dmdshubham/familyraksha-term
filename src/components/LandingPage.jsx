@@ -115,12 +115,12 @@ function LandingPage() {
   };
 
   const insurers = [
-    { name: 'Niva Bupa Health Insurance', logo: '/images/partners/niva.svg' },
-    { name: 'Care Health Insurance', logo: '/images/partners/care.svg' },
-    { name: 'Aditya Birla Health Insurance', logo: '/images/partners/aditya.svg' },
-    { name: 'Bajaj Allianz Health Insurance', logo: '/images/partners/bajaj.svg' },
-    { name: 'Manipal Cigna Health Insurance', logo: '/images/partners/manipal.svg' },
-    { name: 'Star Health Insurance', logo: '/images/partners/star.svg' }
+    { name: 'Niva Bupa Term Insurance', logo: '/images/partners/niva.svg' },
+    { name: 'Care Term Insurance', logo: '/images/partners/care.svg' },
+    { name: 'Aditya Birla Term Insurance', logo: '/images/partners/aditya.svg' },
+    { name: 'Bajaj Allianz Term Insurance', logo: '/images/partners/bajaj.svg' },
+    { name: 'Manipal Cigna Term Insurance', logo: '/images/partners/manipal.svg' },
+    { name: 'Star Term Insurance', logo: '/images/partners/star.svg' }
   ];
 
   return (
@@ -132,7 +132,7 @@ function LandingPage() {
             <div className="col-lg-6 col-md-12 mb-4 mb-lg-0">
               <div className="hero-content wow fadeInLeft">
                 <h1>
-                  Buy the Best Health Insurance Plans in India{' '}
+                  Buy the Best Term Insurance Plans in India{' '}
                   <span className="highlight-price">starting @₹615/month ONLY</span>
                 </h1>
               </div>
@@ -140,7 +140,7 @@ function LandingPage() {
             <div className="col-lg-5 col-md-12 ms-lg-auto hero-form-col">
               <div className="hero-form-wrapper wow fadeInRight">
                 <div className="hero-form">
-                  <h3>Find your ideal health insurance plan</h3>
+                  <h3>Find your ideal term insurance plan</h3>
                   <form onSubmit={handleHeroSubmit}>
                     <div className="form-group">
                       <label htmlFor="hero-name">Your Name*</label>
@@ -190,7 +190,7 @@ function LandingPage() {
                       {heroLoading ? 'Submitting...' : 'View Plans'}
                     </button>
                     <div style={{ marginTop: '12px', fontSize: '12px', color: '#666', textAlign: 'center' }}>
-                      By submitting, you agree to our <Link to="/terms-conditions" style={{ color: '#4a90e2', textDecoration: 'none' }}>Terms & Conditions</Link> and <Link to="/privacy-policy" style={{ color: '#4a90e2', textDecoration: 'none' }}>Privacy Policy</Link>
+                      By submitting, you agree to our <Link to="/terms-conditions" target='_blank' style={{ color: '#4a90e2', textDecoration: 'none' }}>Terms & Conditions</Link> and <Link to="/privacy-policy" target='_blank' style={{ color: '#4a90e2', textDecoration: 'none' }}>Privacy Policy</Link>
                     </div>
                     {heroMessage && (
                       <div className={`form-message ${heroMessage.includes('✓') ? 'success' : 'error'}`}>
@@ -209,7 +209,7 @@ function LandingPage() {
       <section className="content-inner bg-white">
         <div className="container">
           <div className="section-head style-4 text-center my-2">
-            <h2 className="title">Benefits of Health Plans offered through us</h2>
+            <h2 className="title">Benefits of Term Plans offered through us</h2>
           </div>
           <div className="row">
             <div className="col-lg-3 col-md-6 wow fadeInUp">
@@ -267,7 +267,7 @@ function LandingPage() {
         <div className="container">
           <div className="section-head style-4 text-center mb-5">
             <h2 className="title text-white">
-              Why Choose <strong>Family Raksha</strong> to Buy Health Insurance?
+              Why Choose <strong>Family Raksha</strong> to Buy Term Insurance?
             </h2>
             <p className="text-white stats-description">
               Get the best protection with customizable policies, tax-saving benefits, and the lowest premium guaranteed — all backed by 10+ years of expertise from IRDAI-certified advisors. Enjoy quick 30-minute claim settlements and join thousands of satisfied customers who've rated us 4.5★ on Google.
@@ -300,12 +300,12 @@ function LandingPage() {
       <section className="insurance-info-section">
         <div className="container">
           <div className="section-head style-4 text-center mb-5">
-            <h6 className="sub-title">Health Insurance</h6>
+            <h6 className="sub-title">Term Insurance</h6>
             <h2 className="title">
-              We bring the <strong>Best Health Insurance</strong> options to you
+              We bring the <strong>Best Term Insurance</strong> options to you
             </h2>
             <p className="section-description">
-              Health insurance, also known as medical insurance, is a type of policy that covers your medical expenses. It covers expenses for medical treatments at reputed hospitals
+              Term insurance, also known as medical insurance, is a type of policy that covers your medical expenses. It covers expenses for medical treatments at reputed hospitals
             </p>
           </div>
           <div className="row">
@@ -339,7 +339,7 @@ function LandingPage() {
         <div className="container">
           <div className="section-head style-4 text-center mb-5">
             <h2 className="title">
-              Key <strong>Features</strong> Of Health Insurance
+              Key <strong>Features</strong> Of Term Insurance
             </h2>
           </div>
           <div className="row">
@@ -347,7 +347,7 @@ function LandingPage() {
               <div className="info-card">
                 <h3>Coverage Details</h3>
                 <ul>
-                  <li><strong>Health Insurance Cost:</strong> Starting at Rs 15/Day<sup>*</sup></li>
+                  <li><strong>Term Insurance Cost:</strong> Starting at Rs 15/Day<sup>*</sup></li>
                   <li><strong>Coverage Amount:</strong> Up to Rs 1 Crore</li>
                   <li><strong>Minimum Entry Age:</strong> 0 years (Newborn Baby)</li>
                   <li><strong>Maximum Entry Age:</strong> 99 years</li>
@@ -397,7 +397,7 @@ function LandingPage() {
                       <td>Birth - 17 years</td>
                     </tr>
                     <tr>
-                      <td>Pre-Existing Health Condition Waiting Period</td>
+                      <td>Pre-Existing Term Condition Waiting Period</td>
                       <td>One month to 3 years</td>
                     </tr>
                   </tbody>
@@ -423,7 +423,7 @@ function LandingPage() {
             <div className="col-lg-6 col-md-12 wow fadeInUp">
               <div className="testimonial-card">
                 <div className="quote">
-                  "Recently purchased health insurance for a family member. Very good support was provided by the team. Cleared all the doubts and explained all the features of the policy. Gave the plan that exactly fits my requirements."
+                  "Recently purchased term insurance for a family member. Very good support was provided by the team. Cleared all the doubts and explained all the features of the policy. Gave the plan that exactly fits my requirements."
                 </div>
                 <div className="author">- Rohan Mehta</div>
               </div>
@@ -447,7 +447,7 @@ function LandingPage() {
             <div className="col-lg-6 col-md-12 wow fadeInUp">
               <div className="testimonial-card">
                 <div className="quote">
-                  "Family Raksha - You guys are superb and excellent as you helped me to find cost effective health insurance for me with good and quick service."
+                  "Family Raksha - You guys are superb and excellent as you helped me to find cost effective term insurance for me with good and quick service."
                 </div>
                 <div className="author">- Abhay Chaturvedi</div>
               </div>
@@ -464,7 +464,7 @@ function LandingPage() {
               5 Reasons Why You Should Buy <strong>Medical Insurance</strong>
             </h2>
             <p className="section-description">
-              Medical insurance covers your medical and hospitalization expenses, in the event of a health emergency.
+              Medical insurance covers your medical and hospitalization expenses, in the event of a term emergency.
             </p>
           </div>
           <div className="row">
@@ -475,7 +475,7 @@ function LandingPage() {
               </div>
               <div className="reason-item">
                 <h4>2. Coverage for a wide range of medical treatments and procedures</h4>
-                <p>Usually, most health insurance policies cover a wide range of medical treatments and procedures. If not planned for, these expenses can drain your savings.</p>
+                <p>Usually, most term insurance policies cover a wide range of medical treatments and procedures. If not planned for, these expenses can drain your savings.</p>
               </div>
               <div className="reason-item">
                 <h4>3. Cashless Hospitalization</h4>
@@ -485,11 +485,11 @@ function LandingPage() {
             <div className="col-lg-6 wow fadeInRight">
               <div className="reason-item">
                 <h4>4. Coverage for the Whole Family</h4>
-                <p>A family floater plan allows you to cover your entire family — spouse, children, and parents — under one policy. This makes it affordable and convenient to protect everyone's health with a single premium.</p>
+                <p>A family floater plan allows you to cover your entire family — spouse, children, and parents — under one policy. This makes it affordable and convenient to protect everyone's term with a single premium.</p>
               </div>
               <div className="reason-item">
                 <h4>5. Tax Benefits Under Section 80D</h4>
-                <p>Premiums paid towards health insurance qualify for tax deductions under Section 80D of the Income Tax Act. You can save up to ₹25,000 for self and family, and an additional ₹50,000 if you pay for your parents' policy.</p>
+                <p>Premiums paid towards term insurance qualify for tax deductions under Section 80D of the Income Tax Act. You can save up to ₹25,000 for self and family, and an additional ₹50,000 if you pay for your parents' policy.</p>
               </div>
             </div>
           </div>
