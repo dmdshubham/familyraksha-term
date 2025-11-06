@@ -266,7 +266,7 @@ function LandingPage() {
       <section className="stats-section">
         <div className="container">
           <div className="section-head style-4 text-center mb-5">
-            <h2 className="title text-white">
+            <h2 className="title text-white" style={{ color: 'white' }}>
               Why Choose <strong>Family Raksha</strong> to Buy Term Insurance?
             </h2>
             <p className="text-white stats-description">
@@ -409,7 +409,7 @@ function LandingPage() {
       </section>
 
       {/* Client Testimonials Section */}
-      <section className="insurance-info-section testimonials-section">
+      <section className="insurance-info-section">
         <div className="container">
           <div className="section-head style-4 text-center mb-5">
             <h2 className="title">
