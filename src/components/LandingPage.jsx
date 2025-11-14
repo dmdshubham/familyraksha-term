@@ -1,17 +1,36 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './LandingPage.css';
 
 function LandingPage() {
+  const location = useLocation();
   const [heroForm, setHeroForm] = useState({ name: '', email: '', phone: '' });
   const [ctaForm, setCtaForm] = useState({ name: '', email: '', phone: '' });
   const [heroMessage, setHeroMessage] = useState('');
   const [ctaMessage, setCtaMessage] = useState('');
   const [heroLoading, setHeroLoading] = useState(false);
   const [ctaLoading, setCtaLoading] = useState(false);
+  const [utmParams, setUtmParams] = useState({});
 
   const SUPABASE_URL = 'https://wxofebyviealmeyltqtm.functions.supabase.co/handle-web-lead-india';
   const SUPABASE_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind4b2ZlYnl2aWVhbG1leWx0cXRtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc5MTU3NzUsImV4cCI6MjA2MzQ5MTc3NX0.r6jgXR48bAOL66JDsPBW9NpOCPxUszCLMWlStZ6AH34';
+
+  // Capture UTM parameters and fbclid from URL on component mount
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const params = {
+      utm_platform: searchParams.get('utm_platform') || '',
+      utm_source: searchParams.get('utm_source') || '',
+      utm_campaign: searchParams.get('utm_campaign') || '',
+      utm_adset: searchParams.get('utm_adset') || '',
+      utm_ad: searchParams.get('utm_ad') || '',
+      utm_term: searchParams.get('utm_term') || '',
+      utm_medium: searchParams.get('utm_medium') || '',
+      utm_content: searchParams.get('utm_content') || '',
+      fbclid: searchParams.get('fbclid') || '',
+    };
+    setUtmParams(params);
+  }, [location.search]);
 
   const isValidEmail = (email) => {
     if (!email) return true;
@@ -35,7 +54,16 @@ function LandingPage() {
         Name: formData.name,
         Email: formData.email,
         Mobile: formData.phone,
-        Source: source
+        Source: source,
+        utm_platform: utmParams.utm_platform,
+        utm_source: utmParams.utm_source,
+        utm_campaign: utmParams.utm_campaign,
+        utm_adset: utmParams.utm_adset,
+        utm_ad: utmParams.utm_ad,
+        utm_term: utmParams.utm_term,
+        utm_medium: utmParams.utm_medium,
+        utm_content: utmParams.utm_content,
+        fbclid: utmParams.fbclid
       };
 
       const response = await fetch(SUPABASE_URL, {
